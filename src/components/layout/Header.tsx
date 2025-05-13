@@ -9,7 +9,7 @@ const navigation = [
   { name: '렌탈솔루션', href: '#services' },
   { name: '렌탈뉴스', href: '#news' },
   { name: '고객 사례', href: '#cases' },
-  { name: '문의하기', href: '#contact' },
+  { name: '무료상담', href: '#contact' },
 ];
 
 export default function Header() {
@@ -54,7 +54,16 @@ export default function Header() {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // 헤더 높이를 고려한 스크롤 위치 계산
+      const headerHeight = 80; // 헤더 높이 (px)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
       setMobileMenuOpen(false);
     }
   };

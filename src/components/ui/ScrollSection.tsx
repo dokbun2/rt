@@ -7,9 +7,10 @@ interface ScrollSectionProps {
   className?: string;
   id?: string;
   enableSnap?: boolean;
+  fullHeight?: boolean;
 }
 
-export default function ScrollSection({ children, className = '', id, enableSnap = true }: ScrollSectionProps) {
+export default function ScrollSection({ children, className = '', id, enableSnap = true, fullHeight = true }: ScrollSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
   
@@ -17,7 +18,7 @@ export default function ScrollSection({ children, className = '', id, enableSnap
     <section 
       ref={ref}
       id={id}
-      className={`min-h-screen ${enableSnap ? 'snap-start' : ''} flex items-center ${className}`}
+      className={`${fullHeight ? 'min-h-screen' : ''} ${enableSnap ? 'snap-start' : ''} flex items-center pt-10 md:pt-24 ${className}`}
     >
       <motion.div 
         className="w-full"

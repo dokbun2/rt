@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@/styles/fonts.css";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "REN'T - 렌탈 전문 컨설팅",
@@ -46,7 +45,6 @@ export default function RootLayout({
         <div className="min-h-full">
           <Header />
           <main>{children}</main>
-          <Footer />
         </div>
       </body>
     </html>

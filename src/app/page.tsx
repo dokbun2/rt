@@ -7,18 +7,18 @@ import Footer from '@/components/layout/Footer';
 
 export default function Home() {
   return (
-    <div className="bg-black text-white snap-y snap-mandatory h-screen overflow-y-auto scrollbar-hide scroll-smooth">
+    <div className="bg-black text-white h-full overflow-y-auto scrollbar-hide scroll-smooth">
       {/* Hero section */}
-      <div className="snap-start h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
         <MainHero />
       </div>
       
       {/* 회사소개 섹션 */}
-      <ScrollSection id="about" className="bg-black py-20">
+      <ScrollSection id="about" className="bg-black py-20" enableSnap={false}>
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center lg:text-left">
                 <span className="text-white">회사 </span>
                 <span className="text-purple-500 inline-block ml-1 md:ml-2">소개</span>
               </h2>
@@ -66,14 +66,6 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="flex flex-wrap space-x-4 justify-center lg:justify-start">
-                <a href="#services" className="px-6 py-3 bg-purple-600 text-white rounded-full text-lg font-semibold shadow-lg hover:bg-purple-500 transition-all duration-300">
-                  서비스 알아보기
-                </a>
-                <a href="#contact" className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-full text-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                  문의하기
-                </a>
-              </div>
             </div>
             
             <div className="w-full lg:w-1/2 relative">
@@ -109,9 +101,9 @@ export default function Home() {
       </ScrollSection>
       
       {/* 서비스 섹션 */}
-      <ScrollSection id="services" className="bg-black/80 py-20">
+      <ScrollSection id="services" className="bg-black/80 py-20" enableSnap={false}>
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
             <span className="text-white">렌탈 </span>
             <span className="text-purple-500 inline-block ml-1 md:ml-2">솔루션</span>
           </h2>
@@ -151,9 +143,9 @@ export default function Home() {
       </ScrollSection>
       
       {/* 뉴스 섹션 */}
-      <ScrollSection id="news" className="bg-black py-20">
+      <ScrollSection id="news" className="bg-black py-20" enableSnap={false}>
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
             <span className="text-white">렌탈 </span>
             <span className="text-purple-500 inline-block ml-1 md:ml-2">뉴스</span>
           </h2>
@@ -208,9 +200,9 @@ export default function Home() {
       </ScrollSection>
       
       {/* 고객 사례 섹션 */}
-      <ScrollSection id="cases" className="bg-black/80 py-20">
+      <ScrollSection id="cases" className="bg-black/80 py-20" enableSnap={false}>
         <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
             <span className="text-white">고객 </span>
             <span className="text-purple-500 inline-block ml-1 md:ml-2">사례</span>
           </h2>
@@ -295,46 +287,66 @@ export default function Home() {
       </ScrollSection>
       
       {/* 문의하기 섹션 */}
-      <div className="snap-start">
-        {/* 문의하기 섹션 */}
-        <ScrollSection id="contact" className="bg-black py-20" enableSnap={false}>
-          <div className="container mx-auto px-6 py-10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-              <span className="text-white">문의 </span>
-              <span className="text-purple-500 inline-block ml-1 md:ml-2">하기</span>
+      <div id="contact" className="h-screen flex items-center justify-center">
+        <ScrollSection className="bg-[#131313] py-0" enableSnap={false} fullHeight={false}>
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-8 text-center">
+              <span className="text-purple-500">무료상담 </span>
+              <span className="text-white inline-block ml-1 md:ml-2">신청하기</span>
             </h2>
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-xl mx-auto">
               {/* 문의 양식 */}
-              <div className="bg-black/60 rounded-lg p-8 shadow-lg">
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="rounded-lg p-4 md:p-6 border border-gray-800 bg-[#0d0d0d]">
+                <form className="space-y-3 md:space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-lg font-medium text-gray-300 mb-2">이름</label>
-                      <input type="text" id="name" className="w-full px-4 py-3 bg-black/80 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white text-lg" />
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">이름 <span className="text-purple-500">*</span></label>
+                      <input type="text" id="name" placeholder="이름을 입력하세요" className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-black text-sm" />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-lg font-medium text-gray-300 mb-2">이메일</label>
-                      <input type="email" id="email" className="w-full px-4 py-3 bg-black/80 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white text-lg" />
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">연락처 <span className="text-purple-500">*</span></label>
+                      <input type="text" id="company" placeholder="연락처를 입력하세요" className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-black text-sm" />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-lg font-medium text-gray-300 mb-2">제목</label>
-                    <input type="text" id="subject" className="w-full px-4 py-3 bg-black/80 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white text-lg" />
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">이메일 <span className="text-purple-500">*</span></label>
+                    <input type="email" id="email" placeholder="이메일을 입력하세요" className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-black text-sm" />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-lg font-medium text-gray-300 mb-2">메시지</label>
-                    <textarea id="message" rows={5} className="w-full px-4 py-3 bg-black/80 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white text-lg"></textarea>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-1">관심 서비스 <span className="text-purple-500">*</span></label>
+                    <select id="service" className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-black text-sm">
+                      <option value="">선택해주세요</option>
+                      <option value="rental-setup">렌탈사 설립</option>
+                      <option value="rental-partnership">렌탈업무 제휴</option>
+                      <option value="rental-system">렌탈시스템 구축</option>
+                      <option value="rental-part-time">렌탈 부업</option>
+                      <option value="online-seminar">온라인 세미나</option>
+                    </select>
                   </div>
                   <div>
-                    <button type="submit" className="w-full px-6 py-4 bg-purple-600 text-white rounded-md font-semibold hover:bg-purple-500 transition-all duration-300 text-xl">문의하기</button>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">문의 내용 <span className="text-purple-500">*</span></label>
+                    <textarea id="message" placeholder="문의 내용을 입력하세요" rows={2} className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-purple-500 text-black text-sm"></textarea>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex items-center h-5">
+                      <input id="privacy" type="checkbox" className="h-4 w-4 accent-purple-600" />
+                    </div>
+                    <div className="ml-3 text-xs">
+                      <label htmlFor="privacy" className="text-gray-300">개인정보 수집 및 이용에 동의합니다. <span className="text-purple-500">*</span></label>
+                    </div>
+                  </div>
+                  <div>
+                    <button type="submit" className="w-full px-4 py-2 md:py-3 bg-purple-600 text-white rounded-md font-semibold hover:bg-purple-500 transition-all duration-300 text-sm md:text-base">상담 신청하기</button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </ScrollSection>
-        
-        {/* 푸터 */}
+      </div>
+      
+      {/* 푸터 */}
+      <div>
         <Footer />
       </div>
     </div>

@@ -104,11 +104,11 @@ export default function AboutPage() {
       {/* 렌탈 뉴스 섹션 */}
       <section className="py-20 bg-black/50">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center">
             <span className="text-white">렌탈 </span>
             <span className="text-purple-500 inline-block ml-1 md:ml-2">뉴스</span>
           </h2>
-          <p className="text-center text-gray-300 mb-12">최신 렌탈 업계 소식과 트렌드를 확인하세요</p>
+          <p className="text-center text-gray-300 mb-16">최신 렌탈 업계 소식과 트렌드를 확인하세요</p>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* 뉴스 이미지 */}
@@ -134,7 +134,7 @@ export default function AboutPage() {
       {/* 고객 후기 섹션 */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center">
             <span className="text-white">고객 </span>
             <span className="text-purple-500 inline-block ml-1 md:ml-2">후기</span>
           </h2>
@@ -199,7 +199,7 @@ export default function AboutPage() {
       {/* 문의 섹션 */}
       <section className="py-20 bg-black/70">
         <div className="container mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center">
             <span className="text-white">문의 </span>
             <span className="text-purple-500 inline-block ml-1 md:ml-2">하기</span>
           </h2>
