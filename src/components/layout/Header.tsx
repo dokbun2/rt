@@ -6,8 +6,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
   { name: '회사소개', href: '#hero' },
-  { name: '디지털솔루션', href: '#services' },
-  { name: '최신소식', href: '#news' },
+  { name: '렌탈솔루션', href: '#services' },
+  { name: '렌탈뉴스', href: '#news' },
   { name: '고객 사례', href: '#cases' },
   { name: '문의하기', href: '#contact' },
 ];
@@ -42,9 +42,9 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <a href="#hero" className="p-0" onClick={(e) => handleScrollTo(e, '#hero')}>
               <span className="text-4xl font-bold tracking-wide">
-                <span className="text-blue-500">R</span>
-                <span className="text-blue-300 tracking-tighter">T</span>
-                <span className="text-white ml-2">디지털</span>
+                <span className="text-purple-500">REN</span>
+                <span className="text-purple-300 tracking-tighter">' T</span>
+                <span className="text-white ml-3">렌잇</span>
               </span>
             </a>
           </div>
@@ -65,17 +65,17 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleScrollTo(e, item.href)}
-                  className="group relative text-xl font-semibold leading-6 text-white hover:text-blue-300 transition-colors duration-200 cursor-pointer"
+                  className="group relative text-xl font-semibold leading-6 text-white hover:text-purple-300 transition-colors duration-200 cursor-pointer"
                 >
                   <span className="relative z-10">{item.name}</span>
-                  <span className="absolute left-0 -bottom-1 w-full h-1 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                  <span className="absolute left-0 -bottom-1 w-full h-1 bg-purple-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
                 </a>
               ))}
               <a
                 key={navigation[navigation.length-1].name}
                 href={navigation[navigation.length-1].href}
                 onClick={(e) => handleScrollTo(e, navigation[navigation.length-1].href)}
-                className="px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-400 text-white font-semibold shadow hover:from-blue-600 hover:to-blue-500 transition-all duration-200 text-xl cursor-pointer"
+                className="px-6 py-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-400 text-white font-semibold shadow hover:from-purple-600 hover:to-purple-500 transition-all duration-200 text-xl cursor-pointer"
               >
                 {navigation[navigation.length-1].name}
               </a>
@@ -85,7 +85,7 @@ export default function Header() {
       )}
       {/* 모바일 메뉴 */}
       <div className={`lg:hidden absolute left-0 right-0 top-full w-full z-[100] transition-all duration-300 ${mobileMenuOpen ? '' : 'hidden'}`}>
-        <div className="bg-gray-900/95 backdrop-blur-md border-b border-blue-900/30 shadow-lg px-6 py-4">
+        <div className="bg-gray-900/95 backdrop-blur-md border-b border-purple-900/30 shadow-lg px-6 py-4">
           <div className="flex justify-end mb-4">
             <button
               type="button"
@@ -102,7 +102,7 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="block rounded-lg px-3 py-3 text-xl font-semibold leading-7 text-white hover:bg-gray-800 transition-colors hover:border-b-4 hover:border-blue-400 border-b-0 cursor-pointer"
+                className="block rounded-lg px-3 py-3 text-xl font-semibold leading-7 text-white hover:bg-gray-800 transition-colors hover:border-b-4 hover:border-purple-400 border-b-0 cursor-pointer"
               >
                 {item.name}
               </a>
@@ -111,7 +111,7 @@ export default function Header() {
               key={navigation[navigation.length-1].name}
               href={navigation[navigation.length-1].href}
               onClick={(e) => handleScrollTo(e, navigation[navigation.length-1].href)}
-              className="mt-2 block rounded-full bg-gradient-to-r from-blue-500 to-blue-400 px-5 py-3 text-center text-xl font-bold text-white shadow hover:from-blue-600 hover:to-blue-500 transition-all duration-200 cursor-pointer"
+              className="mt-2 block rounded-full bg-gradient-to-r from-purple-500 to-purple-400 px-5 py-3 text-center text-xl font-bold text-white shadow hover:from-purple-600 hover:to-purple-500 transition-all duration-200 cursor-pointer"
             >
               {navigation[navigation.length-1].name}
             </a>
