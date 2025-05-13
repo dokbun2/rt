@@ -21,8 +21,6 @@ const nextConfig: NextConfig = {
   productionBrowserSourceMaps: false,
   // 트레일링 슬래시 활성화
   trailingSlash: true,
-  // 출력 경로 설정
-  distDir: 'dist',
 };
 
 export default nextConfig;

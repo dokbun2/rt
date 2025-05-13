@@ -2,14 +2,7 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": true,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/" }
-  ],
-  "builds": [
-    {
-      "src": "dist",
-      "use": "@vercel/static"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 } 
