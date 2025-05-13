@@ -38,7 +38,7 @@ export default function MainHero() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
           >
             <motion.h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
@@ -55,7 +55,7 @@ export default function MainHero() {
               </div>
             </motion.h1>
             <motion.p
-              className="text-2xl text-gray-300 mb-10 max-w-xl"
+              className="text-xl text-gray-300 mb-8 max-w-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.6, ease: 'easeOut' }}
@@ -71,13 +71,13 @@ export default function MainHero() {
             >
               <a
                 href="#services"
-                className="px-8 py-4 bg-purple-600 text-white rounded-full text-2xl font-semibold shadow-lg hover:bg-purple-500 transition-all duration-300"
+                className="px-6 py-3 bg-purple-600 text-white rounded-full text-xl font-semibold shadow-lg hover:bg-purple-500 transition-all duration-300"
               >
                 렌탈솔루션
               </a>
               <a
                 href="#contact"
-                className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full text-2xl font-semibold hover:bg-white/10 transition-all duration-300"
+                className="px-6 py-3 bg-transparent border-2 border-white text-white rounded-full text-xl font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 무료상담신청
               </a>
@@ -91,16 +91,16 @@ export default function MainHero() {
             transition={{ duration: 0.8, delay: 0.5, ease: 'easeOut' }}
           >
             <div className="flex items-center mb-4 justify-start w-full pl-2">
-              <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mr-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-white">렌잇과 함께 성장</h2>
+              <h2 className="text-xl font-bold text-white">렌잇과 함께 성장</h2>
             </div>
-            <div className="pl-20 text-left w-full">
-              <p className="text-xl text-gray-300 mb-4">성공적인 렌탈 비즈니스의 시작</p>
-              <ul className="space-y-3 text-left">
+            <div className="pl-16 text-left w-full">
+              <p className="text-lg text-gray-300 mb-3">성공적인 렌탈 비즈니스의 시작</p>
+              <ul className="space-y-2 text-left">
                 {[
                   '렌탈사 설립 전문 컨설팅',
                   '최신 렌탈 시스템 구축',
@@ -108,12 +108,12 @@ export default function MainHero() {
                   '부업으로 시작하는 렌탈 비즈니스'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="mt-1 mr-3 text-purple-400">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <div className="mt-1 mr-2 text-purple-400">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-white text-lg">{item}</span>
+                    <span className="text-white text-base">{item}</span>
                   </li>
                 ))}
               </ul>
