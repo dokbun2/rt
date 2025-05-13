@@ -172,7 +172,7 @@ export default function Home() {
       </ScrollSection>
       
       {/* 서비스 섹션 */}
-      <ScrollSection id="services" className="bg-[#0d1528] pt-32 pb-16 md:pb-24" enableSnap={false}>
+      <ScrollSection id="services" className="bg-[#0d1528] pt-20 md:pt-24 pb-16 md:pb-24" enableSnap={false}>
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
             <span className="text-white">렌탈 </span>
@@ -316,7 +316,7 @@ export default function Home() {
       </ScrollSection>
       
       {/* 뉴스 섹션 */}
-      <ScrollSection id="news" className="bg-black pt-32 pb-16 md:pb-24" enableSnap={false}>
+      <ScrollSection id="news" className="bg-black pt-20 md:pt-24 pb-16 md:pb-24" enableSnap={false}>
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
             <span className="text-white">렌탈 </span>
@@ -373,7 +373,7 @@ export default function Home() {
       </ScrollSection>
       
       {/* 고객 사례 섹션 */}
-      <ScrollSection id="cases" className="bg-gradient-to-b from-black to-black/90 pt-32 pb-16 md:pb-24" enableSnap={false}>
+      <ScrollSection id="cases" className="bg-gradient-to-b from-black to-black/90 pt-20 md:pt-24 pb-16 md:pb-24" enableSnap={false}>
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-5xl font-bold mb-12 md:mb-16 text-center">
             <span className="text-white">고객 </span>
@@ -460,7 +460,7 @@ export default function Home() {
       </ScrollSection>
       
       {/* 문의하기 섹션 */}
-      <div id="contact" className="w-full flex items-center justify-center bg-gradient-to-b from-black to-gray-900/80 pt-32 pb-16 md:pb-24">
+      <div id="contact" className="w-full flex items-center justify-center bg-gradient-to-b from-black to-gray-900/80 pt-15 md:pt-20 pb-16 md:pb-24">
         <div className="container mx-auto px-6">
           <div className="w-full max-w-3xl mx-auto">
             <div className="bg-[#131313] rounded-xl shadow-2xl overflow-hidden border border-purple-900/20 shadow-purple-900/10">
@@ -472,19 +472,19 @@ export default function Home() {
                 <form className="space-y-5 md:space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-lg font-medium text-gray-300 mb-2">이름 <span className="text-purple-500">*</span></label>
-                    <input type="text" id="name" placeholder="이름을 입력하세요" className="w-full px-5 py-4 md:py-5 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm" />
+                    <input type="text" id="name" placeholder="이름을 입력하세요" className="w-full px-5 py-3 md:py-4 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-lg font-medium text-gray-300 mb-2">연락처 <span className="text-purple-500">*</span></label>
-                    <input type="text" id="phone" placeholder="연락처를 입력하세요" className="w-full px-5 py-4 md:py-5 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm" />
+                    <input type="text" id="phone" placeholder="연락처를 입력하세요" className="w-full px-5 py-3 md:py-4 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-lg font-medium text-gray-300 mb-2">이메일 <span className="text-purple-500">*</span></label>
-                    <input type="email" id="email" placeholder="이메일을 입력하세요" className="w-full px-5 py-4 md:py-5 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm" />
+                    <input type="email" id="email" placeholder="이메일을 입력하세요" className="w-full px-5 py-3 md:py-4 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm" />
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-lg font-medium text-gray-300 mb-2">관심 서비스 <span className="text-purple-500">*</span></label>
-                    <select id="service" className="w-full px-5 py-4 md:py-5 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm">
+                    <select id="service" className="w-full px-5 py-3 md:py-4 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm">
                       <option value="">선택해주세요</option>
                       <option value="rental-setup">렌탈사 설립</option>
                       <option value="rental-partnership">렌탈업무 제휴</option>
@@ -495,7 +495,7 @@ export default function Home() {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-lg font-medium text-gray-300 mb-2">문의 내용 <span className="text-purple-500">*</span></label>
-                    <textarea id="message" placeholder="문의 내용을 입력하세요" rows={4} className="w-full px-5 py-4 md:py-5 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm"></textarea>
+                    <textarea id="message" placeholder="문의 내용을 입력하세요" rows={4} className="w-full px-5 py-3 md:py-4 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black text-lg shadow-sm"></textarea>
                   </div>
                   <div className="flex items-start mt-4">
                     <div className="flex items-center h-6">
@@ -506,7 +506,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="pt-4 md:pt-6">
-                    <button type="submit" className="w-full px-6 py-5 md:py-6 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-all duration-300 text-xl shadow-lg shadow-purple-900/30">상담 신청하기</button>
+                    <button type="submit" className="w-full px-6 py-6 md:py-7 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-all duration-300 text-xl shadow-lg shadow-purple-900/30">상담 신청하기</button>
                   </div>
                 </form>
               </div>
@@ -514,6 +514,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      {/* 푸터 */}
+      <Footer />
     </div>
   );
 }

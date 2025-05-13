@@ -135,7 +135,7 @@ export default function Header() {
               <span className="text-4xl md:text-5xl font-bold tracking-wide">
                 <span className="text-purple-500">REN</span>
                 <span className="text-[#11b77f] tracking-tighter">' T</span>
-                <span className="text-white ml-3 md:ml-6">렌잇</span>
+                <span className="text-white ml-3 md:ml-6 text-2xl md:text-3xl font-light">렌잇</span>
               </span>
             </a>
           </div>
@@ -162,10 +162,10 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleScrollTo(e, item.href)}
-                  className="group relative text-xl font-semibold leading-6 text-white hover:text-purple-300 transition-colors duration-200 cursor-pointer"
+                  className="group relative text-xl font-light leading-6 text-white hover:text-white transition-colors duration-200 cursor-pointer"
                 >
                   <span className="relative z-10">{item.name}</span>
-                  <span className="absolute left-0 -bottom-1 w-full h-1 bg-purple-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                  <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
                 </a>
               ))}
               <a
@@ -192,11 +192,11 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="block rounded-lg px-4 py-4 text-xl font-semibold leading-7 text-white hover:text-purple-300 transition-all duration-300 relative group overflow-hidden cursor-pointer"
+                className="block rounded-lg px-4 py-4 text-xl font-light leading-7 text-white hover:text-white transition-all duration-300 relative group overflow-hidden cursor-pointer"
               >
                 <span className="relative z-10">{item.name}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-purple-500 group-hover:w-full transition-all duration-300 ease-in-out"></span>
-                <span className="absolute inset-0 bg-purple-900/10 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-white group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                <span className="absolute inset-0 bg-white/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
               </a>
             ))}
             <a
