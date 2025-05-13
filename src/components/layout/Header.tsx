@@ -129,50 +129,50 @@ export default function Header() {
       )}
       
       {mounted && (
-        <nav className="container mx-auto flex items-center justify-between py-6 px-6 relative z-10" aria-label="Global">
+        <nav className="container mx-auto flex items-center justify-between py-4 px-4 relative z-10" aria-label="Global">
           <div className="flex lg:flex-1 w-full lg:w-auto justify-center lg:justify-start">
             <a href="#hero" className="p-0" onClick={(e) => handleScrollTo(e, '#hero')}>
-              <span className="text-3xl md:text-4xl font-bold tracking-wide">
+              <span className="text-2xl md:text-3xl font-bold tracking-wide">
                 <span className="text-purple-500">REN</span>
                 <span className="text-[#11b77f] tracking-tighter">' T</span>
-                <span className="text-white ml-2 md:ml-4 text-xl md:text-2xl font-light">렌잇</span>
+                <span className="text-white ml-1.5 md:ml-3 text-lg md:text-xl font-light">렌잇</span>
               </span>
             </a>
           </div>
-          <div className="absolute right-6 lg:hidden flex items-center">
+          <div className="absolute right-4 lg:hidden flex items-center">
             <button
               ref={mobileButtonRef}
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2 text-purple-400 hover:text-purple-300 transition-colors"
+              className="inline-flex items-center justify-center rounded-md p-1.5 text-purple-400 hover:text-purple-300 transition-colors"
               onClick={toggleMobileMenu}
               aria-expanded={mobileMenuOpen}
             >
               <span className="sr-only">메뉴 열기</span>
               {mobileMenuOpen ? (
-                <XMarkIcon className="h-7 w-7" aria-hidden="true" />
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
               ) : (
-                <Bars3Icon className="h-7 w-7" aria-hidden="true" />
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               )}
             </button>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <div className="flex flex-row items-center gap-x-8">
+            <div className="flex flex-row items-center gap-x-6">
               {navigation.slice(0, -1).map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleScrollTo(e, item.href)}
-                  className="group relative text-lg font-light leading-6 text-white hover:text-white transition-colors duration-200 cursor-pointer"
+                  className="group relative text-base font-light leading-6 text-white hover:text-white transition-colors duration-200 cursor-pointer"
                 >
                   <span className="relative z-10">{item.name}</span>
-                  <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
+                  <span className="absolute left-0 -bottom-1 w-full h-[1.5px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
                 </a>
               ))}
               <a
                 key={navigation[navigation.length-1].name}
                 href={navigation[navigation.length-1].href}
                 onClick={(e) => handleScrollTo(e, navigation[navigation.length-1].href)}
-                className="px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-500 to-purple-400 text-white font-semibold shadow hover:from-purple-600 hover:to-purple-500 transition-all duration-200 text-base cursor-pointer"
+                className="px-3.5 py-1 rounded-full bg-gradient-to-r from-purple-500 to-purple-400 text-white font-semibold shadow hover:from-purple-600 hover:to-purple-500 transition-all duration-200 text-sm cursor-pointer"
               >
                 {navigation[navigation.length-1].name}
               </a>
@@ -185,17 +185,17 @@ export default function Header() {
         ref={mobileMenuRef}
         className={`lg:hidden absolute left-0 right-0 top-full w-full z-[100] transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
       >
-        <div className="bg-black/70 backdrop-blur-lg border-b border-purple-900/30 shadow-lg px-6 py-6">
-          <div className="flex flex-col gap-3">
+        <div className="bg-black/70 backdrop-blur-lg border-b border-purple-900/30 shadow-lg px-4 py-4">
+          <div className="flex flex-col gap-2">
             {navigation.slice(0, -1).map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleScrollTo(e, item.href)}
-                className="block rounded-lg px-4 py-3 text-lg font-light leading-7 text-white hover:text-white transition-all duration-300 relative group overflow-hidden cursor-pointer"
+                className="block rounded-lg px-3 py-2 text-base font-light leading-7 text-white hover:text-white transition-all duration-300 relative group overflow-hidden cursor-pointer"
               >
                 <span className="relative z-10">{item.name}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-white group-hover:w-full transition-all duration-300 ease-in-out"></span>
                 <span className="absolute inset-0 bg-white/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></span>
               </a>
             ))}
@@ -203,7 +203,7 @@ export default function Header() {
               key={navigation[navigation.length-1].name}
               href={navigation[navigation.length-1].href}
               onClick={(e) => handleScrollTo(e, navigation[navigation.length-1].href)}
-              className="mt-3 block rounded-full bg-gradient-to-r from-purple-500 to-purple-400 px-5 py-3 text-center text-lg font-bold text-white shadow hover:from-purple-600 hover:to-purple-500 transition-all duration-200 cursor-pointer"
+              className="mt-2 block rounded-full bg-gradient-to-r from-purple-500 to-purple-400 px-4 py-2 text-center text-base font-bold text-white shadow hover:from-purple-600 hover:to-purple-500 transition-all duration-200 cursor-pointer"
             >
               {navigation[navigation.length-1].name}
             </a>
