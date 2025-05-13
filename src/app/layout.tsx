@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 import "@/styles/fonts.css";
 import Header from "@/components/layout/Header";
@@ -43,12 +42,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="h-full">
-      <head>
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src * 'self' data: blob: 'unsafe-inline' 'unsafe-eval'; script-src * 'self' 'unsafe-inline' 'unsafe-eval'; style-src * 'self' 'unsafe-inline'; font-src * 'self' data: blob:; img-src * 'self' data:; connect-src * 'self';"
-        />
-      </head>
       <body className="h-full font-['Paperlogy'] bg-gray-900">
         <div className="min-h-full">
           <Header />
