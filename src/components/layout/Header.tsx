@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
@@ -16,6 +16,9 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const mobileButtonRef = useRef<HTMLButtonElement>(null);
+  
   useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
@@ -25,6 +28,27 @@ export default function Header() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  
+  // 메뉴 영역 외부 클릭 시 메뉴 닫기
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (mobileMenuOpen && 
+          mobileMenuRef.current && 
+          !mobileMenuRef.current.contains(event.target as Node) &&
+          mobileButtonRef.current &&
+          !mobileButtonRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside as EventListener);
+    document.addEventListener('touchstart', handleClickOutside as EventListener);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside as EventListener);
+      document.removeEventListener('touchstart', handleClickOutside as EventListener);
+    };
+  }, [mobileMenuOpen]);
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -33,6 +57,10 @@ export default function Header() {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
@@ -50,12 +78,18 @@ export default function Header() {
           </div>
           <div className="flex lg:hidden">
             <button
+              ref={mobileButtonRef}
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
-              onClick={() => setMobileMenuOpen(true)}
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-purple-400 hover:text-purple-300 transition-colors"
+              onClick={toggleMobileMenu}
+              aria-expanded={mobileMenuOpen}
             >
               <span className="sr-only">메뉴 열기</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              {mobileMenuOpen ? (
+                <XMarkIcon className="h-10 w-10" aria-hidden="true" />
+              ) : (
+                <Bars3Icon className="h-10 w-10" aria-hidden="true" />
+              )}
             </button>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -84,18 +118,11 @@ export default function Header() {
         </nav>
       )}
       {/* 모바일 메뉴 */}
-      <div className={`lg:hidden absolute left-0 right-0 top-full w-full z-[100] transition-all duration-300 ${mobileMenuOpen ? '' : 'hidden'}`}>
+      <div 
+        ref={mobileMenuRef}
+        className={`lg:hidden absolute left-0 right-0 top-full w-full z-[100] transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+      >
         <div className="bg-gray-900/95 backdrop-blur-md border-b border-purple-900/30 shadow-lg px-6 py-4">
-          <div className="flex justify-end mb-4">
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-white"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">메뉴 닫기</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
           <div className="flex flex-col gap-2">
             {navigation.slice(0, -1).map((item) => (
               <a
