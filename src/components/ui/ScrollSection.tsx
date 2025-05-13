@@ -18,7 +18,7 @@ export default function ScrollSection({ children, className = '', id, enableSnap
     <section 
       ref={ref}
       id={id}
-      className={`${fullHeight ? 'min-h-screen' : ''} ${enableSnap ? 'snap-start' : ''} flex items-center pt-10 md:pt-24 ${className}`}
+      className={`${fullHeight ? 'min-h-screen' : ''} ${enableSnap ? 'snap-start' : ''} flex items-center pt-6 md:pt-20 ${className}`}
     >
       <motion.div 
         className="w-full"

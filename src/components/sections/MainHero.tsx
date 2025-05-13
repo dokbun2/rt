@@ -29,7 +29,7 @@ export default function MainHero() {
       {/* 배경 그라데이션 효과 */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-100/10 to-black opacity-20 z-10"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 relative z-20 flex flex-col justify-center h-full pt-24">
+      <div className="container mx-auto px-4 sm:px-6 relative z-20 flex flex-col justify-center h-full pt-5 md:pt-24 lg:pt-32">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
           <motion.div
             className="w-full lg:w-3/5 mb-12 lg:mb-0 flex flex-col text-center lg:text-left items-center lg:items-start justify-center"
