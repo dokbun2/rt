@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 export const metadata: Metadata = {
   title: "REN'T - 렌탈 전문 컨설팅",
   description: "렌탈 전문 컨설팅 기업 REN'T입니다. 렌탈 비즈니스의 시작과 성장을 함께합니다.",
+  metadataBase: new URL('https://rt-dokbun2.vercel.app'),
   
   // Open Graph 메타태그
   openGraph: {
