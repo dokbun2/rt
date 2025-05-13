@@ -64,7 +64,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/70 backdrop-blur-md shadow-lg' : 'bg-gray-900/30 backdrop-blur-sm'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-gray-900/70 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
       {mounted && (
         <nav className="container mx-auto flex items-center justify-between py-6 px-6" aria-label="Global">
           <div className="flex lg:flex-1">

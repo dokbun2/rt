@@ -29,3 +29,15 @@ body {
   font-family: 'Paperlogy', Arial, Helvetica, sans-serif;
   font-size: var(--base-font-size);
 }
+
+/* 스크롤바 숨기기 */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+}

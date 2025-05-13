@@ -2,33 +2,36 @@ import Link from 'next/link';
 import MainHero from "@/components/sections/MainHero";
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ScrollSection from '@/components/ui/ScrollSection';
 
 export default function Home() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-gray-900 text-white snap-y snap-proximity h-screen overflow-y-auto scrollbar-hide scroll-smooth">
       {/* Hero section */}
-      <MainHero />
+      <div className="snap-start h-screen flex flex-col">
+        <MainHero />
+      </div>
       
       {/* 회사소개 섹션 */}
-      <section id="about" className="py-20 bg-gray-800">
+      <ScrollSection id="about" className="bg-gray-800 py-20">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center lg:text-left">
                 <span className="text-white">회사 </span>
                 <span className="text-purple-500">소개</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-6">
+              <p className="text-xl text-gray-300 mb-6 text-center lg:text-left">
                 렌잇은 렌탈 비즈니스 설립부터 운영까지 필요한 모든 전문 서비스를 제공합니다.
                 10년 이상의 경험을 바탕으로 고객님의 성공적인 비즈니스를 위해 최선을 다하고 있습니다.
               </p>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8 text-center lg:text-left">
                 시장 조사부터 비즈니스 모델 구축, 시스템 개발까지 종합적인 컨설팅 서비스로
                 고객의 니즈에 맞는 최적의 솔루션을 제공합니다.
               </p>
               
               <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="flex items-center">
+                <div className="flex items-center justify-center lg:justify-start">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4 shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -36,7 +39,7 @@ export default function Home() {
                   </div>
                   <span className="text-lg text-gray-200">전문성</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center justify-center lg:justify-start">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4 shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -44,7 +47,7 @@ export default function Home() {
                   </div>
                   <span className="text-lg text-gray-200">신뢰성</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center justify-center lg:justify-start">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4 shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -52,7 +55,7 @@ export default function Home() {
                   </div>
                   <span className="text-lg text-gray-200">효율성</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center justify-center lg:justify-start">
                   <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4 shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -62,7 +65,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap space-x-4 justify-center lg:justify-start">
                 <a href="#services" className="px-6 py-3 bg-purple-600 text-white rounded-full text-lg font-semibold shadow-lg hover:bg-purple-500 transition-all duration-300">
                   서비스 알아보기
                 </a>
@@ -77,12 +80,9 @@ export default function Home() {
                 <div className="aspect-[4/3] relative">
                   <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/40 to-transparent z-10"></div>
                   <img 
-                    src="/images/company.jpg" 
+                    src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1000" 
                     alt="렌잇 회사 이미지" 
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1000";
-                    }}
                   />
                 </div>
                 
@@ -105,10 +105,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollSection>
       
       {/* 서비스 섹션 */}
-      <section id="services" className="py-20 bg-gray-900">
+      <ScrollSection id="services" className="bg-gray-900 py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-white">렌탈 </span>
@@ -147,10 +147,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollSection>
       
       {/* 뉴스 섹션 */}
-      <section id="news" className="py-20 bg-gray-800">
+      <ScrollSection id="news" className="bg-gray-800 py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-white">렌탈 </span>
@@ -204,10 +204,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollSection>
       
       {/* 고객 사례 섹션 */}
-      <section id="cases" className="py-20 bg-gray-900">
+      <ScrollSection id="cases" className="bg-gray-900 py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-white">고객 </span>
@@ -291,11 +291,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ScrollSection>
       
       {/* 문의하기 섹션 */}
-      <section id="contact" className="py-20 bg-gray-800">
-        <div className="container mx-auto px-6">
+      <ScrollSection id="contact" className="bg-gray-800 py-20">
+        <div className="container mx-auto px-6 py-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-white">문의 </span>
             <span className="text-purple-500">하기</span>
@@ -328,8 +328,11 @@ export default function Home() {
               </form>
             </div>
           </div>
+          
+          {/* 여백 추가 */}
+          <div className="h-20"></div>
         </div>
-      </section>
+      </ScrollSection>
     </div>
   );
 }

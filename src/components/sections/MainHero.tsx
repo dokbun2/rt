@@ -7,7 +7,7 @@ export default function MainHero() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="w-full min-h-screen flex items-center bg-gray-900 text-white pt-32 pb-20 relative overflow-hidden"
+      className="w-full h-screen flex items-center bg-gray-900 text-white relative overflow-hidden"
       id="hero"
     >
       {/* 배경 동영상 */}
@@ -29,10 +29,10 @@ export default function MainHero() {
       {/* 배경 그라데이션 효과 */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-black opacity-70 z-1"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col justify-center h-full">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between h-full">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col justify-center h-full pt-16">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
           <motion.div
-            className="w-full lg:w-1/2 mb-12 lg:mb-0 flex flex-col text-center lg:text-left items-center lg:items-start justify-center"
+            className="w-full lg:w-3/5 mb-12 lg:mb-0 flex flex-col text-center lg:text-left items-center lg:items-start justify-center"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
@@ -43,11 +43,16 @@ export default function MainHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4, ease: 'easeOut' }}
             >
-              <span className="text-white">렌탈 비즈니스 </span>
-              <span className="text-purple-500">모든 것!</span>
-              <br />
-              <span className="text-white">렌잇이</span>
-              <span className="text-purple-500"> 알려드립니다.</span>
+              <div className="flex flex-col">
+                <div>
+                  <span className="text-white">렌탈 비즈니스 </span>
+                  <span className="text-purple-500">모든 것!</span>
+                </div>
+                <div className="mt-2">
+                  <span className="text-white">렌잇이 </span>
+                  <span className="text-purple-500">알려드립니다.</span>
+                </div>
+              </div>
             </motion.h1>
             <motion.p
               className="text-2xl text-gray-300 mb-10 max-w-xl"
