@@ -6,9 +6,10 @@ interface ScrollSectionProps {
   children: ReactNode;
   className?: string;
   id?: string;
+  enableSnap?: boolean;
 }
 
-export default function ScrollSection({ children, className = '', id }: ScrollSectionProps) {
+export default function ScrollSection({ children, className = '', id, enableSnap = true }: ScrollSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.3 });
   
@@ -16,7 +17,7 @@ export default function ScrollSection({ children, className = '', id }: ScrollSe
     <section 
       ref={ref}
       id={id}
-      className={`min-h-screen snap-start flex items-center ${className}`}
+      className={`min-h-screen ${enableSnap ? 'snap-start' : ''} flex items-center ${className}`}
     >
       <motion.div 
         className="w-full"

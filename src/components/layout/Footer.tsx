@@ -25,8 +25,8 @@ export default function Footer() {
           <div>
             <div className="text-2xl font-bold mb-4">
               <span className="text-purple-500">REN</span>
-              <span className="text-purple-300">'T</span>
-              <span className="text-white ml-2">렌잇</span>
+              <span className="text-[#11b77f]">'T</span>
+              <span className="text-white ml-4 md:ml-6">렌잇</span>
             </div>
             <p className="text-gray-300 text-sm mb-6 max-w-xs">
               렌탈 비즈니스의 성공적인 시작과 성장을 위한 전문 컨설팅 서비스를 제공합니다. 렌잇과 함께 성장하세요.

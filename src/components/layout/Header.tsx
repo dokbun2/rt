@@ -71,8 +71,8 @@ export default function Header() {
             <a href="#hero" className="p-0" onClick={(e) => handleScrollTo(e, '#hero')}>
               <span className="text-4xl font-bold tracking-wide">
                 <span className="text-purple-500">REN</span>
-                <span className="text-purple-300 tracking-tighter">' T</span>
-                <span className="text-white ml-3">렌잇</span>
+                <span className="text-[#11b77f] tracking-tighter">' T</span>
+                <span className="text-white ml-4 md:ml-6">렌잇</span>
               </span>
             </a>
           </div>

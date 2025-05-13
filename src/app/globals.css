@@ -41,3 +41,23 @@ body {
     display: none;  /* Chrome, Safari, Opera */
   }
 }
+
+/* 스크롤 애니메이션 */
+html {
+  scroll-behavior: smooth;
+}
+
+.snap-y {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* 스크롤 트랜지션 */
+.overflow-y-auto {
+  transition: scroll-behavior 0.5s ease;
+}

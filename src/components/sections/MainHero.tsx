@@ -7,7 +7,7 @@ export default function MainHero() {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="w-full h-screen flex items-center bg-gray-900 text-white relative overflow-hidden"
+      className="w-full h-screen flex items-center bg-black text-white relative overflow-hidden"
       id="hero"
     >
       {/* 배경 동영상 */}
@@ -18,18 +18,18 @@ export default function MainHero() {
           loop
           playsInline
           poster="/images/poster.png"
-          className="object-cover w-full h-full opacity-60"
+          className="object-cover w-full h-full opacity-50"
         >
           <source src="/videos/background.mp4" type="video/mp4" />
         </video>
         {/* 어두운 오버레이 */}
-        <div className="absolute inset-0 bg-black opacity-2"></div>
+        <div className="absolute inset-0 bg-black opacity-0"></div>
       </div>
       
       {/* 배경 그라데이션 효과 */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/20 to-black opacity-70 z-1"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-100/10 to-black opacity-20 z-10"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 relative z-10 flex flex-col justify-center h-full pt-16">
+      <div className="container mx-auto px-4 sm:px-6 relative z-20 flex flex-col justify-center h-full pt-16">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between">
           <motion.div
             className="w-full lg:w-3/5 mb-12 lg:mb-0 flex flex-col text-center lg:text-left items-center lg:items-start justify-center"

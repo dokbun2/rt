@@ -24,8 +24,8 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               <span className="text-white">렌탈 </span>
-              <span className="text-purple-500">솔루션</span>
-              <span className="text-white">이란?</span>
+              <span className="text-purple-500 inline-block ml-1 md:ml-2">솔루션</span>
+              <span className="text-white inline-block ml-1 md:ml-2">이란?</span>
             </h2>
             <p className="text-gray-300 max-w-3xl mx-auto">
               렌탈 비즈니스의 성공을 위한 통합 솔루션을 제공합니다.
@@ -44,7 +44,7 @@ export default function AboutPage() {
               />
             </div>
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-purple-400">렌탈 비즈니스의 <span className="text-white">전문가</span></h3>
+              <h3 className="text-2xl font-bold mb-6 text-purple-400">렌탈 비즈니스의 <span className="text-white inline-block ml-1 md:ml-2">전문가</span></h3>
               <p className="text-gray-300 mb-6">
                 렌잇은 렌탈 비즈니스 분야에서 10년 이상의 경험을 바탕으로 고객님의 성공적인 비즈니스를 위한 최고의 솔루션을 제공합니다. 시장 조사부터 비즈니스 모델 구축, 시스템 개발까지 종합적인 컨설팅 서비스로 고객의 니즈에 맞는 최적의 결과를 도출합니다.
               </p>
@@ -81,7 +81,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-16 text-center">
             <span className="text-white">렌탈 </span>
-            <span className="text-purple-500">솔루션</span>
+            <span className="text-purple-500 inline-block ml-1 md:ml-2">솔루션</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -106,7 +106,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">
             <span className="text-white">렌탈 </span>
-            <span className="text-purple-500">뉴스</span>
+            <span className="text-purple-500 inline-block ml-1 md:ml-2">뉴스</span>
           </h2>
           <p className="text-center text-gray-300 mb-12">최신 렌탈 업계 소식과 트렌드를 확인하세요</p>
           
@@ -136,7 +136,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
             <span className="text-white">고객 </span>
-            <span className="text-purple-500">후기</span>
+            <span className="text-purple-500 inline-block ml-1 md:ml-2">후기</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -201,7 +201,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center">
             <span className="text-white">문의 </span>
-            <span className="text-purple-500">하기</span>
+            <span className="text-purple-500 inline-block ml-1 md:ml-2">하기</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -209,8 +209,8 @@ export default function AboutPage() {
               <div className="mb-8">
                 <div className="text-2xl font-bold mb-4">
                   <span className="text-purple-500">REN</span>
-                  <span className="text-purple-300">'T</span>
-                  <span className="text-white ml-2">렌잇</span>
+                  <span className="text-[#11b77f]">'T</span>
+                  <span className="text-white ml-4 md:ml-6">렌잇</span>
                 </div>
                 <p className="text-gray-300 mb-4">
                   빠르고 효율적인 렌탈 비즈니스의 시작,<br />
