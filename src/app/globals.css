@@ -6,7 +6,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --base-font-size: 0.95rem;
+  --base-font-size: 0.875rem;
 }
 
 @theme inline {
@@ -28,6 +28,7 @@ body {
   color: var(--foreground);
   font-family: 'Paperlogy', Arial, Helvetica, sans-serif;
   font-size: var(--base-font-size);
+  line-height: 1.6;
 }
 
 /* 스크롤바 숨기기 */
@@ -45,6 +46,7 @@ body {
 /* 스크롤 애니메이션 */
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 .snap-y {
@@ -60,4 +62,14 @@ html {
 /* 스크롤 트랜지션 */
 .overflow-y-auto {
   transition: scroll-behavior 0.5s ease;
+}
+
+/* 반응형 글꼴 크기 */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  :root {
+    --base-font-size: 0.85rem;
+  }
 }
