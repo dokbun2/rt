@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: '회사소개', href: '#hero' },
+  { name: '회사소개', href: '#about' },
   { name: '렌탈솔루션', href: '#services' },
   { name: '렌탈뉴스', href: '#news' },
   { name: '고객 사례', href: '#cases' },
@@ -76,11 +76,11 @@ export default function Header() {
               </span>
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden items-center">
             <button
               ref={mobileButtonRef}
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-purple-400 hover:text-purple-300 transition-colors"
+              className="inline-flex items-center justify-center rounded-md p-2 text-purple-400 hover:text-purple-300 transition-colors"
               onClick={toggleMobileMenu}
               aria-expanded={mobileMenuOpen}
             >
