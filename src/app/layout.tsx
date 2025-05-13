@@ -5,21 +5,21 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "RENIT - 렌탈 전문 컨설팅",
-  description: "렌탈 전문 컨설팅 기업 RENIT입니다. 렌탈 비즈니스의 시작과 성장을 함께합니다.",
+  title: "RT - 디지털 비즈니스 전문 컨설팅",
+  description: "디지털 비즈니스 전문 컨설팅 기업 RT입니다. 웹사이트 구축, 앱 개발, 디지털 마케팅의 시작과 성장을 함께합니다.",
   
   // Open Graph 메타태그
   openGraph: {
-    title: "RENIT - 렌탈 전문 컨설팅",
-    description: "렌탈 전문 컨설팅 기업 RENIT입니다. 렌탈 비즈니스의 시작과 성장을 함께합니다.",
-    url: "https://renit.dokbun2.com",
-    siteName: "RENIT",
+    title: "RT - 디지털 비즈니스 전문 컨설팅",
+    description: "디지털 비즈니스 전문 컨설팅 기업 RT입니다. 웹사이트 구축, 앱 개발, 디지털 마케팅의 시작과 성장을 함께합니다.",
+    url: "https://rt-dokbun2.vercel.app",
+    siteName: "RT",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "RENIT - 렌탈 전문 컨설팅",
+        alt: "RT - 디지털 비즈니스 전문 컨설팅",
       },
     ],
     locale: "ko_KR",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   // Twitter Card 메타태그
   twitter: {
     card: "summary_large_image",
-    title: "RENIT - 렌탈 전문 컨설팅",
-    description: "렌탈 전문 컨설팅 기업 RENIT입니다. 렌탈 비즈니스의 시작과 성장을 함께합니다.",
+    title: "RT - 디지털 비즈니스 전문 컨설팅",
+    description: "디지털 비즈니스 전문 컨설팅 기업 RT입니다. 웹사이트 구축, 앱 개발, 디지털 마케팅의 시작과 성장을 함께합니다.",
     images: ["/images/og-image.jpg"],
   },
 };

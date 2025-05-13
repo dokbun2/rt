@@ -11,39 +11,39 @@ export default function Home() {
       <section id="services" className="py-20 bg-gray-900">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            <span className="text-white">렌탈 </span>
-            <span className="text-purple-500">솔루션</span>
+            <span className="text-white">디지털 </span>
+            <span className="text-blue-500">솔루션</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 서비스 내용 */}
-            <div className="bg-gray-800 rounded-xl p-8 shadow-lg border border-purple-900/20 hover:border-purple-500/50 transition-all duration-300 hover:shadow-purple-500/10 hover:shadow-xl group">
-              <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+            <div className="bg-gray-800 rounded-xl p-8 shadow-lg border border-blue-900/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl group">
+              <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">렌탈사 설립 컨설팅</h3>
-              <p className="text-xl text-gray-300">렌탈 비즈니스를 시작하는 데 필요한 모든 법적, 행정적 절차를 안내해 드립니다. 사업자 등록부터 필요한 인허가까지 원스톱으로 지원합니다.</p>
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">웹사이트 개발</h3>
+              <p className="text-xl text-gray-300">최신 기술을 활용한 반응형 웹사이트를 개발합니다. SEO 최적화, 빠른 로딩 속도, 사용자 친화적 UI/UX를 제공합니다.</p>
             </div>
             
-            <div className="bg-gray-800 rounded-xl p-8 shadow-lg border border-purple-900/20 hover:border-purple-500/50 transition-all duration-300 hover:shadow-purple-500/10 hover:shadow-xl group">
-              <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+            <div className="bg-gray-800 rounded-xl p-8 shadow-lg border border-blue-900/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl group">
+              <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">렌탈 시스템 구축</h3>
-              <p className="text-xl text-gray-300">최신 기술을 활용한 렌탈 관리 시스템을 구축해 드립니다. 재고 관리, 고객 관리, 결제 시스템 등 렌탈 비즈니스에 필요한 모든 시스템을 제공합니다.</p>
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">앱 개발</h3>
+              <p className="text-xl text-gray-300">iOS 및 Android 플랫폼을 위한 네이티브 및 하이브리드 앱을 개발합니다. 사용자 경험을 최우선으로 고려한 앱 솔루션을 제공합니다.</p>
             </div>
             
-            <div className="bg-gray-800 rounded-xl p-8 shadow-lg border border-purple-900/20 hover:border-purple-500/50 transition-all duration-300 hover:shadow-purple-500/10 hover:shadow-xl group">
-              <div className="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors">
+            <div className="bg-gray-800 rounded-xl p-8 shadow-lg border border-blue-900/20 hover:border-blue-500/50 transition-all duration-300 hover:shadow-blue-500/10 hover:shadow-xl group">
+              <div className="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">렌탈 비즈니스 파트너십</h3>
-              <p className="text-xl text-gray-300">다양한 렌탈 상품 공급업체와의 파트너십을 통해 경쟁력 있는 가격과 안정적인 공급망을 확보할 수 있도록 지원합니다.</p>
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">디지털 마케팅</h3>
+              <p className="text-xl text-gray-300">SEO, 소셜 미디어 마케팅, 콘텐츠 마케팅 등 종합적인 디지털 마케팅 전략을 수립하고 실행합니다. 데이터 기반의 마케팅 솔루션을 제공합니다.</p>
             </div>
           </div>
         </div>
@@ -53,53 +53,53 @@ export default function Home() {
       <section id="news" className="py-20 bg-gray-800">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            <span className="text-white">렌탈 </span>
-            <span className="text-purple-500">뉴스</span>
+            <span className="text-white">최신 </span>
+            <span className="text-blue-500">소식</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* 뉴스 내용 */}
             <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group">
-              <div className="h-48 bg-purple-900/30 relative">
+              <div className="h-48 bg-blue-900/30 relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-purple-600 text-white text-base font-semibold px-3 py-1 rounded-full">업계 소식</span>
+                  <span className="bg-blue-600 text-white text-base font-semibold px-3 py-1 rounded-full">업계 소식</span>
                   <p className="text-white font-semibold mt-2 text-lg">2023년 06월 15일</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">렌탈 시장, 2023년 20% 성장 전망</h3>
-                <p className="text-xl text-gray-300 mb-4">코로나19 이후 소유보다 경험을 중시하는 소비 트렌드가 확산되며 렌탈 시장이 급성장하고 있습니다.</p>
-                <a href="#" className="text-xl text-purple-400 font-semibold hover:text-purple-300 transition-colors">자세히 보기 →</a>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">웹 개발 트렌드, 2023년 변화</h3>
+                <p className="text-xl text-gray-300 mb-4">최신 웹 개발 기술과 프레임워크의 변화를 살펴보고 비즈니스에 어떤 영향을 미칠지 분석합니다.</p>
+                <a href="#" className="text-xl text-blue-400 font-semibold hover:text-blue-300 transition-colors">자세히 보기 →</a>
               </div>
             </div>
             
             <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group">
-              <div className="h-48 bg-purple-900/30 relative">
+              <div className="h-48 bg-blue-900/30 relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-purple-600 text-white text-base font-semibold px-3 py-1 rounded-full">기술 동향</span>
+                  <span className="bg-blue-600 text-white text-base font-semibold px-3 py-1 rounded-full">기술 동향</span>
                   <p className="text-white font-semibold mt-2 text-lg">2023년 05월 22일</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">AI 기반 렌탈 관리 시스템 출시</h3>
-                <p className="text-xl text-gray-300 mb-4">인공지능을 활용한 새로운 렌탈 관리 시스템이 출시되어 재고 예측 및 고객 관리 효율이 크게 향상될 전망입니다.</p>
-                <a href="#" className="text-xl text-purple-400 font-semibold hover:text-purple-300 transition-colors">자세히 보기 →</a>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">AI 기반 웹 개발 도구 출시</h3>
+                <p className="text-xl text-gray-300 mb-4">인공지능을 활용한 새로운 웹 개발 도구가 출시되어 개발 효율성과 사용자 경험이 크게 향상될 전망입니다.</p>
+                <a href="#" className="text-xl text-blue-400 font-semibold hover:text-blue-300 transition-colors">자세히 보기 →</a>
               </div>
             </div>
             
             <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group">
-              <div className="h-48 bg-purple-900/30 relative">
+              <div className="h-48 bg-blue-900/30 relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
                 <div className="absolute bottom-4 left-4">
-                  <span className="bg-purple-600 text-white text-base font-semibold px-3 py-1 rounded-full">정책 변화</span>
+                  <span className="bg-blue-600 text-white text-base font-semibold px-3 py-1 rounded-full">정책 변화</span>
                   <p className="text-white font-semibold mt-2 text-lg">2023년 04월 10일</p>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-300 transition-colors">렌탈 업계 세제 혜택 확대</h3>
-                <p className="text-xl text-gray-300 mb-4">정부가 렌탈 업계 활성화를 위한 세제 혜택을 확대하기로 결정했습니다. 이는 신규 창업자들에게 큰 기회가 될 전망입니다.</p>
-                <a href="#" className="text-xl text-purple-400 font-semibold hover:text-purple-300 transition-colors">자세히 보기 →</a>
+                <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-blue-300 transition-colors">디지털 산업 지원 정책 확대</h3>
+                <p className="text-xl text-gray-300 mb-4">정부가 디지털 산업 활성화를 위한 지원 정책을 확대하기로 결정했습니다. 이는 디지털 기업들에게 큰 기회가 될 전망입니다.</p>
+                <a href="#" className="text-xl text-blue-400 font-semibold hover:text-blue-300 transition-colors">자세히 보기 →</a>
               </div>
             </div>
           </div>
